@@ -201,3 +201,17 @@ __Suggested solutions:__
 
 __Verified for:__ gRPC for dotnet client
 
+## Status(StatusCode=Unavailable, Detail="connections to all backends failing")
+
+__gRPC Status Code:__ Unavailable
+
+__Details:__ 
+- Client has received list of servers from load balancer however it is can not connect to any target server
+
+__Suggested solutions:__ 
+- verify if load balancer has updated list of servers,
+- verify ports returned by load balancer,
+- verify target machines if they are alive,
+- verify the server configuration, in particular exposing/listening to ports, 
+
+__Verified for:__ gRPC for C# client
